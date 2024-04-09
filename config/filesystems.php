@@ -56,6 +56,11 @@ return [
             'throw' => false,
         ],
 
+        'content' => [
+            'driver' => 'local',
+            'root' => base_path('content'),
+        ],
+
     ],
 
     /*

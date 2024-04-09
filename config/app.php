@@ -97,7 +97,6 @@ return [
 
     'fallback_locale' => 'en',
 
-
     /*
     |--------------------------------------------------------------------------
     | Faker Locale
@@ -211,6 +210,7 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'ExampleClass' => App\Example\ExampleClass::class,
+        'Markdown' => GrahamCampbell\Markdown\Facades\Markdown::class,
     ])->toArray(),
 
 ];
