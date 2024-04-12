@@ -1,6 +1,6 @@
 ---
 title: KRW Bank Code List
-description: S88PAY Payment Integration Documentation
+description: Resources {brand} Payment Integration 
 ---
 
 | Bank Code                | 은행 이름              | Bank Name                                  |

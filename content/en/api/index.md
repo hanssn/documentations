@@ -1,41 +1,11 @@
 ---
-title: Introduction
-description: Intro
+title: API Documentation
 ---
 
-To be able to make S88pay via API, the operator has to create a URL that contains the token and parameter. you can
-clearly look at **API function** documentation for URL and parameters.
+## Getting started 
 
-Refer to security on pre-requirement, the parameter is usually using key with encrypt function. you can look at the
-[encrypt / decrypt](/api-reference/encrypt-decrypt).
+To get started, create a new application in your [developer settings](#), then read about how to make requests for the resources you need to access using our HTTP APIs or dedicated client SDKs. When your integration is ready to go live, publish it to our [integrations directory](#) to reach the {brand} community. 
 
-## Make a request
+<x-guides />
 
-Let's say we want to make payment request, the enpoint must be dopayment. And we look at the parameters required
-
-<x-steps>
-
-### Combine all parameters into one string, separated by `&` character
-
-for example, to make request in our services.
-
-```php
-$str =
-merchant_code=xxx&merchant_api_key=xxx&transaction_code=xxx&transaction_timestamp=xxx&payment_code=xxx&transaction_amount=xxx&user_id=xxx&currency_code=xxx
-```
-
-### Encrypt using encrypt_decrypt
-
-Learn more about [encrypt_decrypt ](/api-reference/encrypt-decrypt)
-
-Encryption sample:
-
-```php
-$key = encrypt_decrypt('encrypt', $str, '{your_api_key}', '{your_secret_key}')
-```
-
-### Done
-
-So, the request will be:
-
-</x-steps>
+<x-resources />

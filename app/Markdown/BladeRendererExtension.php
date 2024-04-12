@@ -13,7 +13,6 @@ use League\CommonMark\Extension\CommonMark\Node\Block\HtmlBlock;
 use League\CommonMark\Extension\CommonMark\Node\Block\IndentedCode;
 use League\CommonMark\Extension\CommonMark\Node\Inline\Code;
 use League\CommonMark\Extension\ExtensionInterface;
-use League\CommonMark\Node\Node;
 use League\CommonMark\Output\RenderedContent;
 use League\CommonMark\Renderer\HtmlRenderer;
 
@@ -46,7 +45,7 @@ class BladeRendererExtension implements ExtensionInterface
         foreach ($event->getDocument()->iterator() as $node) {
 
             // We're only looking for code nodes.
-            if (!$this->isCodeNode($node)) {
+            if (! $this->isCodeNode($node)) {
                 continue;
             }
 

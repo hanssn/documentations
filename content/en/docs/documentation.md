@@ -13,20 +13,13 @@
 -   ## Resources
 
     -   [Merchant Currency](/docs/currency)
-    -   [BDT Bank Code](/docs/bank/bdt)
-    -   [BRL Bank Code](/docs/bank/brl)
-    -   [CNY Bank Code](/docs/bank/cny)
-    -   [IDR Bank Code](/docs/bank/idr)
-    -   [JPY Bank Code](/docs/bank/jpy)
-    -   [KRW Bank Code](/docs/bank/krw)
-    -   [MYR Bank Code](/docs/bank/myr)
-    -   [PHP Bank Code](/docs/bank/php)
-    -   [THB Bank Code](/docs/bank/thb)
-    -   [VND Bank Code](/docs/bank/vnd)
+    -   [Banks Code](/docs/banks)
 
 -   ## API References
 
     -   [Overview](/api)
+    -   [Authentication & Security](/api/authentication)
+    -   [Get started with the API](/api/get-started)
     -   [Transaction Status](/api/status)
     -   [Errors List](/api/errors)
 

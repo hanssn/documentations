@@ -13,6 +13,35 @@ toc: false
 
 This API is used to create payment requests. This API requires 1 `key` parameter, which contains a combination of parameters separated by the `&` character and then encrypted using the encrypt_decrypt algorithm.
 
+### Request Body
+
+<x-properties>
+  <x-property name="key" type="string" required>
+  
+  Key generated from [parameters](#parameters) with API key and API secret encryption.
+  </x-property>
+</x-properties>
+
+</x-col>
+<x-col sticky>
+
+```bash
+curl --request POST \
+  --url https://staging.s88pay.net/api/{merchant_code}/v3/dopayment \
+  --header 'Content-Type: application/json' \
+  --data '{
+      "key": "<string>"
+    }'
+```
+
+</x-col>
+</x-row>
+
+---
+
+<x-row>
+<x-col class="md:max-w-lg">
+
 ### Parameters
 
 <x-properties>
@@ -57,17 +86,39 @@ This API is used to create payment requests. This API requires 1 `key` parameter
 </x-properties>
 
 </x-col>
+<x-col sticky>
 
-<x-col class="order-first md:order-last">
-
-```bash
-curl --request POST \
-  --url https://staging.s88pay.net/api/{merchant_code}/v3/dopayment \
-  --header 'Content-Type: application/json' \
-  --data '{
-      "key": "<string>"
-    }'
+```json
+{
+  "merchant_code": "kode_merchant_dari_provider",
+  "merchant_api_key": "api_key_merchant_dari_provider",
+  "transaction_code": "kode_unik_untuk_transaksi_ini",
+  "transaction_timestamp": 1649767200, 
+  "transaction_amount": 99.99,
+  "payment_code": "P001",
+  "user_id": "id_pengguna",
+  "currency_code": "USD",
+  "bank_code": "001", 
+  "deposit_name": "nama_deposit" 
+}
 ```
+
+These parameters must be [encrypted](/api/authentication) before being sent through the [key](#request-body) body.
+
+</x-col>
+</x-row>
+
+---
+
+<x-row>
+<x-col class="lg:max-w-md">
+
+### Response
+
+Returns a transaction status object. This call returns an [error](/api/errors) if an error occurs.
+
+</x-col>
+<x-col sticky>
 
 Response INR
 ```json

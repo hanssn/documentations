@@ -1,4 +1,4 @@
-<aside class="sticky top-24 mb-5 hidden min-w-[280px] max-w-[280px] prose-p:leading-loose px-4 lg:block lg:px-6 xl:px-8">
+<aside class="sticky top-24 mb-5 hidden min-w-[280px] max-w-[280px] px-4 prose-p:leading-loose lg:block lg:px-6 xl:px-8">
     <div x-show="headings.length" x-cloak>
         <p class="mb-2 mt-5 whitespace-nowrap text-xs font-semibold uppercase tracking-widest text-stone-700">
             On this page
@@ -9,10 +9,10 @@
             <template x-for="(heading, index) in headings" :key="`heading-${index}`">
                 <a :href="`#${heading.firstChild.id}`" x-text="heading.innerText"
                     :class="{
-                        'text-green-600': activeHeading === heading,
+                        'text-stone-600 font-medium': activeHeading === heading,
                         'pl-4 border-l': heading.tagName === 'H3'
                     }"
-                    class="transition" @click.prevent="scrollTo(heading.firstChild.id)">
+                    class="transition" @click.prevent="scrollTo(heading.firstChild.id ?? heading.id)">
 
                 </a>
             </template>

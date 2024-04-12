@@ -1,6 +1,6 @@
 ---
 title: BDT Bank Code List
-description: S88PAY Payment Integration Documentation
+description: Resources {brand} Payment Integration 
 ---
 
 | Bank Code              | Bank Name                          |

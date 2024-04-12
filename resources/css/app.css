@@ -6,7 +6,6 @@
     [x-cloak] {
         display: none !important;
     }
-
         
     ::-webkit-scrollbar {
         width: 0.875rem;

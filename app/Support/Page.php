@@ -42,6 +42,7 @@ class Page
             'content' => $markdown->getContent(),
             'frontmatter' => method_exists($markdown, 'getFrontMatter') ? $markdown->getFrontMatter() : null,
             'index' => $this->getSidebar(),
+            'brand' => 'S88pay',
         ]);
     }
 

@@ -16,12 +16,20 @@
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typesense-docsearch-css@0.3.0" />
     <script>
         docsearch({
-            appId: 'R2IYF7ETH7',
-            apiKey: '599cec31baffa4868cae4e79f180729b',
-            indexName: 'docsearch',
+            container: '#docsearch',
+            typesenseCollectionName: 'example', // Should match the collection name you mention in the docsearch scraper config.js
+            typesenseServerConfig: {
+                nodes: [{
+                    host: 'localhost', // For Typesense Cloud use xxx.a1.typesense.net
+                    port: '8108', // For Typesense Cloud use 443
+                    protocol: 'http' // For Typesense Cloud use https
+                }],
+                apiKey: '<SEARCH_API_KEY>', // Use API Key with only Search permissions
+            },
+
         });
     </script>
 </head>
@@ -49,8 +57,13 @@
             });
         },
         scrollTo(id) {
+            console.log(id)
+            let element = document.getElementById(id)
+            element = element.parentElement ? element.parentElement : element
+    
+            console.log(element.offsetTop)
             window.scrollTo({
-                top: document.getElementById(id).parentElement.offsetTop - 120,
+                top: element.offsetTop - 120,
                 behavior: 'smooth',
             })
         }
@@ -64,7 +77,8 @@
                         <div class="flex h-14 justify-between">
                             <!-- Logo -->
                             <div class="flex flex-shrink-0 items-center">
-                                <a href="" class="flex items-center before:absolute before:inset-0 before:-left-[calc(90%-6rem)] before:w-full before:skew-x-[25deg] before:bg-stone-800" >
+                                <a href=""
+                                    class="flex items-center before:absolute before:inset-0 before:-left-[calc(90%-6rem)] before:w-full before:skew-x-[25deg] before:bg-stone-800">
 
                                     <img src="https://www-nurhuda.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Flogo.d06cb0fa.png&w=1920&q=75"
                                         class="z-10 block h-9 w-auto fill-current text-white">
@@ -75,7 +89,7 @@
                                 <div class="ml-10 flex w-full items-center justify-end">
                                     <button
                                         class="hover:bg-transparency-box-5 flex cursor-pointer select-none items-center space-x-0 overflow-hidden rounded-lg bg-transparent px-3 py-1 transition-colors lg:hidden lg:space-x-2"
-                                        id="search-button">
+                                        id="docsearch">
                                         <div>
                                             <x-icons name="magnifying-glass" class="h-5 w-5" />
                                         </div>
@@ -124,8 +138,7 @@
 
         </header>
 
-        <div
-            class="mx-auto items-start gap-x-8 scroll-smooth px-4 py-4 sm:px-6 md:flex lg:px-8">
+        <div class="mx-auto items-start gap-x-8 scroll-smooth px-4 py-4 sm:px-6 md:flex lg:px-8">
             <aside
                 class="sticky top-24 hidden min-w-[280px] max-w-[280px] shrink-0 overflow-y-auto px-4 lg:block lg:px-6 xl:px-8">
                 <nav id="indexed-nav" class="block lg:mt-4">
@@ -137,7 +150,7 @@
             {{ $slot }}
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typesense-docsearch.js@3.4"></script>
 </body>
 
 </html>

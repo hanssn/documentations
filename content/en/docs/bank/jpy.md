@@ -1,6 +1,6 @@
 ---
 title: JPY Bank Code List
-description: S88PAY Payment Integration Documentation
+description: Resources {brand} Payment Integration 
 ---
 
 For JPY Bank Code List use API:

@@ -10,7 +10,7 @@ After the operator sends payout requests, the provider will process it. Once the
 (success or failed), the provider will call this API to forward the transaction status.
 
 Provider will send the parameter on key format, then operator need to decrypt it using
-[encrypt/decrypt](/api-reference/encrypt-decrypt), you need to decrypt with `api_key` and `api_secret`.
+[encrypt/decrypt](/api/authentication), you need to decrypt with `api_key` and `api_secret`.
 
 Besides the key, we also send the transaction code in the `transaction_code` parameter and the transaction
 number

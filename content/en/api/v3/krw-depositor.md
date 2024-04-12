@@ -12,6 +12,36 @@ toc: false
 
 operator need to submit depositor Account to complete payment request.
 
+### Request Body
+
+<x-properties>
+  <x-property name="key" type="string" required>
+  
+  Key generated from [parameters](#parameters) with API key and API secret encryption.
+  </x-property>
+</x-properties>
+
+
+</x-col>
+<x-col sticky>
+
+```bash
+curl --request POST \
+  --url https://staging.s88pay.net/api/{merchant_code}/v3/krw-submit-information \
+  --header 'Content-Type: application/json' \
+  --data '{
+    "key": "<string>"
+  }'
+```
+
+</x-col>
+</x-row>
+
+---
+
+<x-row>
+<x-col class="md:max-w-lg">
+
 ### Parameters
 
 <x-properties>
@@ -25,16 +55,32 @@ operator need to submit depositor Account to complete payment request.
 </x-properties>
 
 </x-col>
-<x-col class="order-first md:order-last">
+<x-col sticky>
 
-```bash
-curl --request POST \
-  --url https://staging.s88pay.net/api/{merchant_code}/v3/krw-submit-information \
-  --header 'Content-Type: application/json' \
-  --data '{
-    "key": "<string>"
-  }'
+```json
+{
+  "transaction_code": "TEST-DP-1697797081",
+  "bank_code": "Destination Bank Name",
+  "account_number": "Destination Bank Account Number"
+}
 ```
+
+These parameters must be [encrypted](/api/authentication) before being sent through the [key](#request-body) body.
+
+</x-col>
+</x-row>
+
+---
+
+<x-row>
+<x-col class="lg:max-w-md">
+
+### Response
+
+Returns a transaction status object. This call returns an [error](/api/errors) if an error occurs.
+
+</x-col>
+<x-col sticky>
 
 ```json
 {
