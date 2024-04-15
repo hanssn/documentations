@@ -4,6 +4,9 @@ title: Introduction
 
 This document aims to provide comprehensive technical specifications for integrating and conducting integration tests with the {brand} Payment Gateway. It encompasses functions, parameters, result formats, and error responses, ensuring a streamlined integration process with minimal complexity in coding.
 
+<x-guides />
+
+
 ## Workflow
 
 ![{brand} Workflow](/storage/workflow.jpg)
@@ -26,5 +29,3 @@ If you are unclear, please continue to contact our support team.
 ## Flowchart V3
 
 ![{brand} Flowchart V3](/storage/flowchart_v3.png)
-
-<x-guides />

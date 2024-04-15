@@ -42,6 +42,12 @@ class TorchlightExtension extends BaseExtension implements ExtensionInterface, N
                 $attributes['title'] = $node->data['title'];
             }
 
+            $copyButton = new HtmlElement('button', [
+                'type' => 'button',
+                'id' => 'copy-button',
+                'class' => 'absolute right-4 top-1.5 overflow-hidden rounded-lg bg-white/5 py-1 pl-2 pr-3 text-xs'
+            ], '<span aria-hidden="true" class="pointer-events-none text-stone-100">Copy</span>');
+
             // Create the <pre> element wrapping the <code> element
             $preElement = new HtmlElement('pre', [], new HtmlElement('code', [], $inner));
 
@@ -51,12 +57,14 @@ class TorchlightExtension extends BaseExtension implements ExtensionInterface, N
                 $titleElement = new HtmlElement('figcaption', $node->data->getData('attributes')->export(), $attributes['title']);
             }
             // Create the <figure> element with appropriate children
-            $figureElementChildren = [$preElement];
+            $figureElementChildren = [$preElement, $copyButton];
 
             if ($titleElement !== null) {
                 array_unshift($figureElementChildren, $titleElement);
             }
-            return new HtmlElement('figure', [], $figureElementChildren);
+            return new HtmlElement('figure', [
+                "class" => "relative"
+            ], $figureElementChildren);
         });
 
         $this->bind($environment, 'addRenderer');
