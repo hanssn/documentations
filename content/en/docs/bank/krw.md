@@ -1,6 +1,6 @@
 ---
 title: KRW Bank Code List
-description: Resources {brand} Payment Integration 
+description: Resources {brand} Payment Integration. 
 ---
 
 | Bank Code                | 은행 이름              | Bank Name                                  |

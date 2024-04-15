@@ -1,6 +1,6 @@
 ---
 title: Payment Request
-description: Make payment request for KRW Only
+description: Make payment request for KRW Only.
 method: POST
 label: /api/{merchant_code}/v3/krw-payment
 toc: false
@@ -75,10 +75,10 @@ curl --request POST \
   <x-property name="user_id" type="string" required>
   </x-property>
   <x-property name="currency_code" type="string" required>
-    Please refer to [currency list](/resources/currency)
+    Please refer to [currency list](/docs/currency)
   </x-property>
   <x-property name="bank_code" type="double" required>
-    Required just on  [BDT](/resources/bank/bdt), [VND](/resources/bank/vnd), [THB](/resources/bank/thb), [IDR](/resources/bank/idr), [MYR](/resources/bank/myr), and [PHP](/resources/bank/php) online bank payment PaymentMethodChangeEvent.
+    Required just on  [BDT](/docs/bank/bdt), [VND](/docs/bank/vnd), [THB](/docs/bank/thb), [IDR](/docs/bank/idr), [MYR](/docs/bank/myr), and [PHP](/docs/bank/php) online bank payment PaymentMethodChangeEvent.
   </x-property>
   <x-property name="deposit_name" type="string" required>
     Deposit name (mandatory for KRW)

@@ -71,7 +71,7 @@ curl --request POST \
     user ID.
   </x-property>
   <x-property name="currency_code" type="string" required>
-  Please refer to [currency list](/resources/currency).
+  Please refer to [currency list](/docs/currency).
   </x-property>
   <x-property name="address" type="string" required>
   <Warning>required for crypto payout</Warning>
@@ -86,20 +86,20 @@ curl --request POST \
 
   The available **INR bank code** is displayed on the bank code section in {brand} Backoffice in Withdraw Menu.
 
-  The available [CNY bank code](/resources/bank/cny).
+  The available [CNY bank code](/docs/bank/cny).
 
-  the avaliable [THB bank code](/resources/bank/thb).
+  the avaliable [THB bank code](/docs/bank/thb).
 
-  the avaliable [BRL bank code](/resources/bank/brl).
+  the avaliable [BRL bank code](/docs/bank/brl).
   </x-property>
   <x-property name="bank_name" type="string" required>
   <Warning>required for ( INR, CNY, VND, THB, BDT, IDR, MYR, KRW, JPY,BRL and PHP Payout)</Warning>
 
   The available **INR bank code** is displayed on the bank code section in {brand} Backoffice in Withdraw Menu.
 
-  The available [CNY bank code](/resources/bank/cny).
+  The available [CNY bank code](/docs/bank/cny).
 
-  the avaliable [THB bank code](/resources/bank/thb).
+  the avaliable [THB bank code](/docs/bank/thb).
 
   the avaliable **BRL** used the account value.
   </x-property>

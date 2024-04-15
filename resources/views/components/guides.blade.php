@@ -1,9 +1,9 @@
 @props([
-    'guides' => __('messages.guides'),
+    'guides' => __('messages.guides.sections'),
 ])
 
 <div class="my-16 xl:max-w-none">
-    <h2 id="guides">Guides</h2>
+    <h2 id="guides">{{ __('messages.guides.title') }}</h2>
     <div class="not-prose mt-2 grid grid-cols-1 gap-8 border-t border-stone-900/5 pt-6 sm:grid-cols-3">
         @foreach ($guides as $guide)
             <div class="flex flex-col">

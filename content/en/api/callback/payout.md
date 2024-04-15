@@ -17,7 +17,7 @@ number
 in the `transaction_no` parameter that is not encrypted.
 
 </x-col>
-<x-col>
+<x-col sticky>
 
 ```bash cURL
 curl --request POST \
@@ -33,12 +33,13 @@ curl --request POST \
 </x-col>
 </x-row>
 
-After decrypting the parameter you will find that the parameters are:
-
-## Parameters
+---
 
 <x-row>
-<x-col>
+<x-col class="md:max-w-lg">
+
+## Response Object
+
 <x-properties>
   <x-property name="transaction_no" type="string">
     The transaction code recorded by the provider.
@@ -63,16 +64,18 @@ After decrypting the parameter you will find that the parameters are:
   </x-property>
 </x-properties>
 </x-col>
-<x-col>
+<x-col sticky>
+
+After **decrypting** the parameters, you will find that the response object are:
 
 ```json
 {
-    "transaction_no": "",
-    "transaction_code": "",
-    "transaction_status": "",
-    "transaction_amount": "",
-    "transaction_fee": "",
-    "currency_code": "",
+    "transaction_no": "WD-987XXXXX",
+    "transaction_code": "WD8765XXXX",
+    "transaction_status": "completed",
+    "transaction_amount": "3000.00",
+    "transaction_fee": "10.00",
+    "currency_code": "BDT",
     "transaction_ref": ""
 }
 ```

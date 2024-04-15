@@ -1,6 +1,6 @@
 ---
 title: Merchant Currency List
-description: Resources {brand} Payment Integration 
+description: Resources {brand} Payment Integration.
 ---
 | Currency Code | Currency Name                       |
 | ------------- | ----------------------------------- |

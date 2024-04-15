@@ -4,27 +4,21 @@ description: Send your first API request.
 toc: true
 ---
 
-Every call to a {brand} API must include an API secret key. After you create a {brand} account, we generate two pairs of API keys for you – a publishable client-side key and a secret server-side key – for both test and live modes. To start moving real money with your live-mode keys, you need to activate your account.
+## Before you get started
 
----
-
-## Before you begin
-First, create a {brand} account or sign in.
-
-This guide walks you through a simple interaction with the {brand} API: creating a customer. For a fuller view of the API objects and how they fit together, take a tour of the API or visit the API reference documentation.
+First, make sure you fulfill the initial requirements for a smooth process.
 
 ## Send your first API request
 
-To be able to make request to {brand} API, the operator has to create a URL that contains the token and parameter. you can
-clearly look at **API function** Section for URL and parameters.
+To make a request to the {brand} API, the operator must create a URL containing tokens and parameters using our own algorithm. You can refer to the **API Functions** section for the URL and parameters, and the [Authentication & Security]('/api/authentication') for the algorithm.
 
-Let's say we want to make payment, so we use the [Payment Enpoint]('/api/payment') to make request. And we look at the parameters required.
+For example, if we want to make a payment request, we use [Payment Endpoint]('/api/payment') to send the request. Then, we look at what parameters are required.
 
 <x-steps>
 
 ### Combine all parameters into one string, separated by `&` character
 
-for example, to make request in our services.
+For example, to make request in our services.
 
 ```php
 $str = "merchant_code=xxx&'
@@ -39,7 +33,7 @@ $str = "merchant_code=xxx&'
 
 ### Encrypt using encrypt_decrypt
 
-Refer to security on pre-requirement, the attribute to send is usually just using **one key** with encrypted parameters. for more info please read more [Authentication & Security]('/api/authentication')
+Refer to security on pre-requirements, the attribute to send is usually just using **one key** with encrypted parameters. for more info please read more [Authentication & Security]('/api/authentication')
 
 Encryption sample:
 
@@ -56,3 +50,5 @@ https://{base_url}/{merchant_code}/v2/dopayment?key=3eX%2Bf%2BMoVECXxSkKqV7aBRYI
 ```
 
 </x-steps>
+
+After the request url is made, the response will depend on each enpoint. see the [return section](/api/payment#return) to see what response will be received.

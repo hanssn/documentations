@@ -12,10 +12,10 @@ The encrypted parameters are decrypted and validated by our system using the sam
 
 ## Security
 
-We have our own algorithm for making requests to hit our endpoint. This algorithm referred to the [security pre-requirement](/docs/pre-requirement) which requires to generate key for each transaction.
+We have our own algorithm for making requests to hit our endpoint. This algorithm referred to the [security pre-requirements](/docs/pre-requirements) which requires to generate key for each transaction.
 
 ## Template Code
-we provide some code snippets to help in development
+we provide some code snippets to help in development.
 
 ### PHP
 ```php

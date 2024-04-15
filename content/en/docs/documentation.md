@@ -8,7 +8,7 @@
 -   ## Getting Started
 
     -   [Introduction](/docs)
-    -   [Pre-Requirement](/docs/pre-requirement)
+    -   [Pre-Requirements](/docs/pre-requirements)
 
 -   ## Resources
 

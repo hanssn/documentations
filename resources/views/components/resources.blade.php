@@ -1,9 +1,10 @@
 @props([
-    'resources' => __('messages.resources'),
+    'resources' => __('messages.resources.sections'),
 ])
 
 <div class="my-16 xl:max-w-none">
-    <h2 id="resource">Resources</h2>
+    <h2 id="resource">{{ __('messages.resources.title') }}</h2>
+    <p class="text-sm">{{ __('messages.resources.description') }}</p>
     <div class="not-prose mt-2 grid grid-cols-1 gap-4 border-t border-stone-900/5 pt-6 sm:grid-cols-2 xl:grid-cols-4">
         @foreach ($resources as $resource)
             <a href={{ $resource['href'] }}

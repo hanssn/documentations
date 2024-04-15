@@ -1,6 +1,6 @@
 ---
 title: PHP Bank Code List
-description: Resources {brand} Payment Integration 
+description: Resources {brand} Payment Integration. 
 ---
 
 | Bank Code          | Bank Name                                    |

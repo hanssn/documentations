@@ -660,6 +660,23 @@
     counter-increment: item;
 }
 
+
+.prose :where(ul li):not(:where([class~="not-prose"] *)):before {
+    position: absolute;
+    background-color: #141414;
+    color: #fff;
+    top: 0;
+    left: 12px;
+    margin-top: 0.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 9999px;
+    content: '';
+}
+
 .prose
     :where(ol li, ol ol, ol ul, ul li, ul ol, ul ul):not(
         :where([class~="not-prose"] *)

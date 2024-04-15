@@ -1,6 +1,6 @@
 @props(['name', 'type' => null, 'required' => false])
 
-<li class="!pl-0 pb-2">
+<li class="!pl-0 pb-2 before:bg-transparent">
     <dl class="flex flex-wrap items-center gap-x-2 text-sm">
         <dt class="sr-only">Name</dt>
         <dd class="m-0 p-0">

@@ -1,6 +1,6 @@
 ---
 title: JPY Bank Code List
-description: Resources {brand} Payment Integration 
+description: Resources {brand} Payment Integration. 
 ---
 
 For JPY Bank Code List use API:

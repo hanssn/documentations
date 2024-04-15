@@ -1,11 +1,11 @@
 ---
 title: Transaction Status
-description: Transaction Status List
+description: Transaction Status List.
 ---
 
 ## Deposit Transaction Status
 
-Deposit Transaction Status List
+Deposit Transaction Status List.
 
 | transaction_status | name             | description                                                                                  |
 | ------------------ | ---------------- | -------------------------------------------------------------------------------------------- |
@@ -17,7 +17,7 @@ Deposit Transaction Status List
 
 ## Payout Transaction Status
 
-Payout Transaction Status List
+Payout Transaction Status List.
 
 | transaction_status | name        | description              |
 | ------------------ | ----------- | ------------------------ |

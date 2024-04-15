@@ -6,14 +6,13 @@ toc: false
 <x-row>
 <x-col class="md:max-w-lg">
 
-After the operator sends a payment request to dopayment / deposit, the provider will process it. Once the provider
-receives the transaction status ( success or failure ), the provider will call this API to forward the transaction
+After the operator sends a payment request to dopayment / deposit, the provider will process it. Once the provider receives the transaction status ( success or failure ), the provider will call this API to forward the transaction
 status.
 
 For key, you need to decrypt with `api_key` and `api_secret`. Besides the key, we also send the transaction code in the `transaction_code` parameter and the transaction number in the `transaction_no` parameter, which is not encrypted.
 
 </x-col>
-<x-col>
+<x-col sticky>
 
 ```bash cURL
 curl --request POST \
@@ -28,11 +27,13 @@ curl --request POST \
 </x-col>
 </x-row>
 
-After decrypting the parameters, you will find that the parameters are:
+---
 
-## Parameters
 <x-row>
-<x-col>        
+<x-col class="md:max-w-lg">        
+
+## Response Object
+
   <x-properties>
     <x-property name="transaction_code" type="string">
         The transaction code that is sent by the operator on dopayment.
@@ -57,18 +58,21 @@ After decrypting the parameters, you will find that the parameters are:
     </x-property>
   </x-properties>
 </x-col>
-<x-col>
+<x-col sticky>
+
+After **decrypting** the parameters, you will find that the response object are:
   
-  ```json
-  {
-      "transaction_code": "",
-      "transaction_status": "",
-      "transaction_amount": "",
-      "transaction_fee": "",
-      "currency_code": "",
-      "transaction_no": "",
-      "transaction_actual_amount": ""
-  }
-  ```
+```json
+ {
+    "transaction_code": "DP-16873xxxxx",
+    "transaction_status": "success",
+    "transaction_amount": "510.00",
+    "transaction_fee": "5.10",
+    "currency_code": "BDT",
+    "transaction_no": "DP16873387xxxxx",
+    "transaction_actual_amount": "504.9"
+}
+```
+
 </x-col>
 </x-row>

@@ -6,7 +6,7 @@ toc: false
 ---
 
 <x-row>
-<x-col class="lg:max-w-lg">
+<x-col class="md:max-w-lg">
 
 ## Make Payment Request
 
@@ -35,7 +35,7 @@ curl --request GET \
 ---
 
 <x-row>
-<x-col class="lg:max-w-lg">
+<x-col class="md:max-w-lg">
 
 ### Parameters
 
@@ -70,10 +70,10 @@ curl --request GET \
   <x-property name="user_id" type="string" required>
   </x-property>
   <x-property name="currency_code" type="string" required>
-    Please refer to [currency list](/resources/currency).
+    Please refer to [currency list](/docs/currency).
   </x-property>
   <x-property name="bank_code" type="double">
-    Required just on [VND](/resources/bank/vnd), [THB](/resources/bank/thb), [IDR](/resources/bank/idr), [MYR](/resources/bank/myr), and [PHP](/resources/bank/php) online bank payment PaymentMethodChangeEvent.
+    Required just on [VND](/docs/bank/vnd), [THB](/docs/bank/thb), [IDR](/docs/bank/idr), [MYR](/docs/bank/myr), and [PHP](/docs/bank/php) online bank payment PaymentMethodChangeEvent.
   </x-property>
   <x-property name="callback_url" type="string">
     url callback beside url set from Backoffice.
