@@ -18,7 +18,7 @@ We have our own algorithm for making requests to hit our endpoint. This algorith
 we provide some code snippets to help in development.
 
 ### PHP
-```php
+```php title="encrypt_decrypt.php"
 public function encrypt_decrypt($action, $string, $apikey = '{your_api_key}', $secretkey = '{your_secret_key}') {
     $output = false;
     $encrypt_method = "AES-256-CBC";
@@ -40,7 +40,7 @@ public function encrypt_decrypt($action, $string, $apikey = '{your_api_key}', $s
 ```
 
 ### C#
-```csharp
+```csharp title="encrypt_decrypt.cs"
 using System;
 using System.Security.Cryptography;
 using System.Text;
@@ -130,7 +130,7 @@ public class EncryptDecrypt
 ```
 
 ### Java
-```java
+```java title="EncryptDecrypt.java"
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.Arrays;
@@ -208,7 +208,7 @@ public class Playground {
 ```
 
 ### Javascript
-```javascript
+```javascript title="encrypt_decrypt.js"
 var crypto = require("crypto");
 
 const apikey = "myapikey";

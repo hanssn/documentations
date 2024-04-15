@@ -23,7 +23,7 @@ Operator need to submit UTR to complete payment request.
 </x-col>
 <x-col sticky>
 
-```bash
+```bash title="cURL"
 curl --request POST \
   --url https://staging.s88pay.net/api/{merchant_code}/v3/submit-utr \
   --header 'Content-Type: application/json' \
@@ -54,7 +54,7 @@ curl --request POST \
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Parameters Object"
 {
   "transaction_code": "success",
   "utr": "938294783732"
@@ -71,14 +71,14 @@ These parameters must be [encrypted](/api/authentication) before being sent thro
 <x-row>
 <x-col class="lg:max-w-md">
 
-### Response
+### Return
 
 Returns a transaction status object. This call returns an [error](/api/errors) if an error occurs.
 
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Response"
 {
   "status": "success",
   "message": "Success Submit Utr!"

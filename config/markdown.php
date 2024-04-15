@@ -50,7 +50,7 @@ return [
         League\CommonMark\Extension\FrontMatter\FrontMatterExtension::class,
         League\CommonMark\Extension\HeadingPermalink\HeadingPermalinkExtension::class,
         League\CommonMark\Extension\GithubFlavoredMarkdownExtension::class,
-        Torchlight\Commonmark\V2\TorchlightExtension::class,
+        App\Markdown\TorchlightExtension::class,
         App\Markdown\BladeRendererExtension::class,
         App\Markdown\BadgeExtension::class,
     ],

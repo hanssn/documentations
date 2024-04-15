@@ -25,7 +25,7 @@ This API is used to check the transaction status. It requires 1 paramter `key`, 
 </x-col>
 <x-col sticky>
 
-```bash
+```bash title="cURL"
 curl --request POST \
 --url https://staging.s88pay.net/api/v1/{merchant_code}/transactions/status \
 --header 'Content-Type: application/x-www-form-urlencoded' \
@@ -54,7 +54,7 @@ curl --request POST \
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Parameters object"
 {
   "merchant_api_key": "xyz456",
   "transaction_code": "TRX123456789",
@@ -70,14 +70,14 @@ These parameters must be [encrypted](/api/authentication) before being sent thro
 <x-row>
 <x-col class="lg:max-w-md">
 
-### Response
+### Return
 
 Returns a transaction status object. This call returns an [error](/api/errors) if an error occurs.
 
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Response"
 {
   "data": [
     {

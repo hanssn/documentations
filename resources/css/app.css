@@ -166,6 +166,15 @@
     }
 }
 
+figcaption[title] {
+    @apply rounded-t-lg text-stone-50  font-medium opacity-95 py-2 px-3;
+    background-color: var(--tw-prose-pre-bg);
+}
+
+figcaption+pre {
+    border-top-left-radius: 0!important;
+    border-top-right-radius: 0!important
+}
 
 .prose :where(ol):not(:where([class~="not-prose"] *)) {
     list-style-type: decimal;
@@ -301,12 +310,6 @@
     margin-bottom: 0;
 }
 
-.prose :where(figcaption):not(:where([class~="not-prose"] *)) {
-    color: var(--tw-prose-captions);
-    font-size: 0.875em;
-    line-height: 1.4285714;
-    margin-top: 0.8571429em;
-}
 
 .prose :where(code):not(:where([class~="not-prose"] *)) {
     color: var(--tw-prose-code);
@@ -693,6 +696,7 @@
         .prose > ul code,
         .prose > p code
     ):not(:where([class~="not-prose"] *)) {
+    @apply break-words;
     background-color: #faf594;
     color: #0d0d0d;
     font-weight: 700;

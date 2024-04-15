@@ -25,7 +25,7 @@ This API is used to create payment requests. This API requires 1 `key` parameter
 </x-col>
 <x-col sticky>
 
-```bash
+```bash title="cURL"
 curl --request POST \
   --url https://staging.s88pay.net/api/{merchant_code}/v3/dopayment \
   --header 'Content-Type: application/json' \
@@ -88,7 +88,7 @@ curl --request POST \
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Parameters Object"
 {
   "merchant_code": "kode_merchant_dari_provider",
   "merchant_api_key": "api_key_merchant_dari_provider",
@@ -113,15 +113,15 @@ These parameters must be [encrypted](/api/authentication) before being sent thro
 <x-row>
 <x-col class="lg:max-w-md">
 
-### Response
+### Return
 
 Returns a transaction status object. This call returns an [error](/api/errors) if an error occurs.
 
 </x-col>
 <x-col sticky>
 
-Response INR
-```json
+
+```json title="Response INR"
 {
  "status": "success",
  "message": "Submit Transaction Success!",
@@ -136,8 +136,7 @@ Response INR
  "expired_timezone":"GMT+05:30",
 }
 ```
-Response BDT
-```json
+```json title="Response BDT"
 {
   "status": "success",
   "message": "Submit Transaction Success!",
@@ -153,8 +152,7 @@ Response BDT
 }
 ```
 
-Response VND
-```json
+```json title="Response VND"
 {
   "status": "success",
   "message": "Submit Transaction Success!",
@@ -170,8 +168,7 @@ Response VND
 }
 ```
 
-Response JPY
-```json
+```json title="Response JPY"
 {
   "status": "success",
   "message": "Submit Transaction Success!",

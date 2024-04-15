@@ -25,7 +25,7 @@ transaction status. It requires an encrypted request with a `secret key` and `me
 </x-col>
 <x-col sticky>
 
-```bash
+```bash title="cURL"
 curl --request POST \
   --url https://staging.{brand}.net/api/v1/payout/{merchant_code} \
   --header 'Content-Type: application/json' \
@@ -117,7 +117,7 @@ curl --request POST \
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Parameters Object"
 {
   "merchant_code": "ABC123",
   "transaction_code": "TRX123456789",
@@ -146,14 +146,14 @@ These parameters must be [encrypted](/api/authentication) before being sent thro
 <x-row>
 <x-col class="lg:max-w-md">
 
-### Response
+### Return
 
 Returns a transaction status object. This call returns an [error](/api/errors) if an error occurs.
 
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Response"
 {
     "message": "request withdraw successful",
     "success": true

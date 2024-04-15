@@ -24,7 +24,7 @@ This API is used to create payment requests. This API requires 1 `key` parameter
 </x-col>
 <x-col sticky>
 
-```bash title="response"
+```bash title="cURL"
 curl --request GET \
   --url https://staging.s88pay.net/{merchant_code}/v2/dopayment?key={string}
 ```
@@ -89,7 +89,7 @@ curl --request GET \
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Parameters object"
 {
   "merchant_code": "ABC123",
   "merchant_api_key": "xyz456",

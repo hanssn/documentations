@@ -14,7 +14,7 @@ For key, you need to decrypt with `api_key` and `api_secret`. Besides the key, w
 </x-col>
 <x-col sticky>
 
-```bash cURL
+```bash title="cURL"
 curl --request POST \
 --url https://s88pay.net/api/v1/transaction/resend-callback/SKU20210909025705 \
 --header 'Content-Type: application/json' \
@@ -32,7 +32,7 @@ curl --request POST \
 <x-row>
 <x-col class="md:max-w-lg">        
 
-## Response Object
+## Response
 
   <x-properties>
     <x-property name="transaction_code" type="string">
@@ -62,7 +62,7 @@ curl --request POST \
 
 After **decrypting** the parameters, you will find that the response object are:
   
-```json
+```json title="Response Object"
  {
     "transaction_code": "DP-16873xxxxx",
     "transaction_status": "success",

@@ -19,7 +19,7 @@ in the `transaction_no` parameter that is not encrypted.
 </x-col>
 <x-col sticky>
 
-```bash cURL
+```bash title="cURL"
 curl --request POST \
 --url https://s88pay.net/api/v1/transaction/resend-callback/SKU20210909025705 \
 --header 'Content-Type: application/json' \

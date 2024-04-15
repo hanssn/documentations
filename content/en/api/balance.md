@@ -25,7 +25,7 @@ This API is used to check the merchant balance amount. It requires 1 post parame
 </x-col>
 <x-col sticky>
 
-```bash
+```bash title="cURL"
 curl --request GET \
 --url https://staging.s88pay.net/api/v1/balance/{merchant_code}?key={string}
 ```
@@ -49,7 +49,7 @@ curl --request GET \
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Parameters Object"
 {
     "merchant_code": "ABC123",
 }
@@ -64,14 +64,14 @@ These parameters must be [encrypted](/api/authentication) before being sent thro
 <x-row>
 <x-col class="lg:max-w-md">
 
-### Response
+### Return
 
 Returns a transaction status object. This call returns an [error](/api/errors) if an error occurs.
 
 </x-col>
 <x-col sticky>
 
-```json
+```json title="Response"
 {
     "balance": 100000,
     "currency_code": "INR",

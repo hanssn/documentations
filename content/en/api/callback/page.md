@@ -8,7 +8,7 @@ failed URL page.
 
 Sample callback success url format set on the Back Office like so:
 
-```bash
+```bash title="Example callback URL"
 https://www.example.com/success
 ```
 
