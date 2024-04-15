@@ -3,6 +3,8 @@
 namespace App\Support;
 
 use GrahamCampbell\Markdown\Facades\Markdown;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Storage;
 
 class Page
@@ -30,20 +32,33 @@ class Page
      *
      * @throws \Illuminate\Contracts\Filesystem\FileNotFoundException
      */
+
     public function view(string $view)
     {
         $path = "$this->locale/$this->type/$this->page.md";
+        abort_if(!$this->disk->exists($path), 404);
 
-        abort_if(! $this->disk->exists($path), 404);
+        if (App::environment('production')) {
+            $cachedData = Cache::rememberForever('view.' . md5($path), function () use ($path) {
+                $markdown = Markdown::convert($this->disk->get($path));
+                return [
+                    'content' => $markdown->getContent(),
+                    'frontmatter' => method_exists($markdown, 'getFrontMatter') ? $markdown->getFrontMatter() : null,
+                    'index' => $this->getSidebar(),
+                    'brand' => 'S88pay',
+                ];
+            });
+        } else {
+            $markdown = Markdown::convert($this->disk->get($path));
+            $cachedData = [
+                'content' => $markdown->getContent(),
+                'frontmatter' => method_exists($markdown, 'getFrontMatter') ? $markdown->getFrontMatter() : null,
+                'index' => $this->getSidebar(),
+                'brand' => 'S88pay',
+            ];
+        }
 
-        $markdown = Markdown::convert($this->disk->get($path));
-
-        return view($view, [
-            'content' => $markdown->getContent(),
-            'frontmatter' => method_exists($markdown, 'getFrontMatter') ? $markdown->getFrontMatter() : null,
-            'index' => $this->getSidebar(),
-            'brand' => 'S88pay',
-        ]);
+        return view($view, $cachedData);
     }
 
     public function getSidebar()
